@@ -2,7 +2,6 @@
 
 #define APin    3
 #define BPin    4
-#define ZeroPin 5
 
 boolean A_Array[4]={1,1,0,0};
 boolean B_Array[4]={0,1,1,0};
@@ -13,7 +12,6 @@ void setup()
 {
   pinMode(APin, OUTPUT);
   pinMode(BPin, OUTPUT);
-  pinMode(ZeroPin, OUTPUT);
   digitalWrite(APin, A_Array[0]); 
   digitalWrite(BPin, B_Array[0]);
 }
@@ -22,28 +20,8 @@ void loop()
 {
   send_DataEncoder(500,1); 
   delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(1000); 
-  send_DataEncoder(100,1); 
-  delay(2000); 
   send_DataEncoder(1500,0);  
-  delay(2000);
+  delay(1000);
 }
 
 void send_DataEncoder(unsigned long pulseCount,boolean Direction)
